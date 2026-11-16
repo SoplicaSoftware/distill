@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SoplicaSoftware/distill/schemas/edu-v1.schema.json",
+  "title": "distill edu-v1 — concept map extracted from slides / documents",
+  "type": "object",
+  "required": ["schema", "source", "concepts", "figures"],
+  "properties": {
+    "schema": { "const": "distill/edu-v1" },
+    "source": {
+      "type": "object",
+      "properties": {
+        "file": { "type": "string" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "slides": { "type": "integer" }
+      }
+    },
+    "status_legend": { "type": "object", "additionalProperties": { "type": "string" } },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "slides"],
+        "properties": {
+          "title": { "type": "string" },
+          "slides": { "type": "array", "items": { "type": "integer" } }
+        }
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "term", "status", "source_slides"],
+        "properties": {
+          "id": { "type": "string", "description": "kebab-case slug, unique in file" },
+          "term": { "type": "string" },
+          "aliases": { "type": "array", "items": { "type": "string" } },
+          "category": { "type": ["string", "null"] },
+          "status": {
+            "enum": ["defined", "partial", "mentioned"],
+            "description": "defined = definition present in the source; partial = only an example, a figure or part of the explanation; mentioned = named only, look it up"
+          },
+          "definition": { "type": ["string", "null"], "description": "From the source only, paraphrased tightly; null when status=mentioned" },
+          "source_slides": { "type": "array", "items": { "type": "integer" } },
+          "figures": { "type": "array", "items": { "type": "string" }, "description": "ids from figures[]" },
+          "examples": { "type": "array", "items": { "type": "string" } },
+          "related": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "relation"],
+              "properties": { "id": { "type": "string" }, "relation": { "type": "string" } }
+            }
+          },
+          "to_find": { "type": "string", "description": "What is missing and should be looked up (required for partial/mentioned)" },
+          "model_note": { "type": "string", "description": "Comment added by the model (doubts, likely errors on slides). Never part of the definition." },
+          "flashcards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["q", "a"],
+              "properties": { "q": { "type": "string" }, "a": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "file", "slide", "caption"],
+        "properties": {
+          "id": { "type": "string", "description": "sNN_fK" },
+          "file": { "type": "string", "description": "relative path, images/sNN_fK.png" },
+          "slide": { "type": "integer" },
+          "caption": { "type": "string" },
+          "concepts": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "exercises": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "slide": { "type": "integer" }, "task": { "type": "string" } } }
+    },
+    "references": { "type": "array", "items": { "type": "object" } },
+    "stats": { "type": "object" }
+  }
+}

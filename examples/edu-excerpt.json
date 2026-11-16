@@ -1,0 +1,208 @@
+{
+  "schema": "distill/edu-v1",
+  "source": {
+    "file": "lecture-04.pdf",
+    "title": "Example lecture on polymers",
+    "author": "",
+    "date": "",
+    "slides": 25
+  },
+  "status_legend": {
+    "defined": "definicja jest w materiale",
+    "partial": "tylko część informacji, przykład lub rysunek – do uzupełnienia",
+    "mentioned": "pojęcie tylko wymienione – do znalezienia"
+  },
+  "stats": {
+    "concepts": 5,
+    "defined": 4,
+    "partial": 0,
+    "mentioned": 1,
+    "figures": 3,
+    "note": "excerpt"
+  },
+  "sections": [
+    {
+      "title": "Nazewnictwo i wzory",
+      "slides": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "mer",
+      "term": "Mer",
+      "aliases": [],
+      "category": "podstawy",
+      "status": "defined",
+      "definition": "Jednostka strukturalna powtarzająca się cyklicznie w łańcuchu polimeru.",
+      "source_slides": [
+        4,
+        10
+      ],
+      "figures": [
+        "s04_f1",
+        "s04_f2",
+        "s10_f1"
+      ],
+      "examples": [
+        "fragment łańcucha poli(tetrafluoroetenu) – teflonu z zaznaczonymi merami",
+        "mer polistyrenu –[CH2–CH(C6H5)]–"
+      ],
+      "related": [
+        {
+          "id": "monomer",
+          "relation": "powstaje z"
+        }
+      ],
+      "flashcards": [
+        {
+          "q": "Co to jest mer?",
+          "a": "Jednostka strukturalna powtarzająca się cyklicznie w łańcuchu polimeru."
+        }
+      ]
+    },
+    {
+      "id": "oligomer",
+      "term": "Oligomer",
+      "aliases": [],
+      "category": "podstawy",
+      "status": "defined",
+      "definition": "Oligomer: n = 1000…10 000.",
+      "source_slides": [
+        4
+      ],
+      "figures": [],
+      "examples": [],
+      "related": [],
+      "model_note": "W wielu podręcznikach oligomer to zwykle kilka–kilkadziesiąt merów; warto sprawdzić, czy zakres 1000…10 000 to celowe ujęcie prowadzącej.",
+      "flashcards": [
+        {
+          "q": "Jaki zakres n podano dla oligomeru na wykładzie?",
+          "a": "n = 1000…10 000."
+        }
+      ]
+    },
+    {
+      "id": "monomer",
+      "term": "Monomer",
+      "aliases": [],
+      "category": "podstawy",
+      "status": "defined",
+      "definition": "Związek małocząsteczkowy (substrat), którego cząsteczki mogą ulegać polireakcji, tworząc polimer. Nie każdy małocząsteczkowy związek organiczny może być monomerem.",
+      "source_slides": [
+        8
+      ],
+      "figures": [],
+      "examples": [
+        "eten (etylen)",
+        "propen (propylen)",
+        "etenol (alkohol winylowy)",
+        "kwas etenowy (kwas akrylowy)",
+        "styren"
+      ],
+      "related": [
+        {
+          "id": "polireakcja",
+          "relation": "ulega"
+        }
+      ],
+      "to_find": "Wzory podanych monomerów oraz „WNIOSEK” – jakie cząsteczki mogą być monomerami (na slajdzie pozostawione jako „…”).",
+      "flashcards": [
+        {
+          "q": "Co to jest monomer?",
+          "a": "Związek małocząsteczkowy (substrat), którego cząsteczki mogą ulegać polireakcji, tworząc polimer."
+        },
+        {
+          "q": "Czy każdy małocząsteczkowy związek organiczny może być monomerem?",
+          "a": "Nie."
+        }
+      ]
+    },
+    {
+      "id": "polireakcja",
+      "term": "Polireakcja",
+      "aliases": [],
+      "category": "podstawy",
+      "status": "mentioned",
+      "definition": null,
+      "source_slides": [
+        8
+      ],
+      "figures": [],
+      "examples": [],
+      "related": [
+        {
+          "id": "monomer",
+          "relation": "dotyczy"
+        }
+      ],
+      "to_find": "Definicja polireakcji i jej rodzaje (polimeryzacja, polikondensacja, poliaddycja)."
+    },
+    {
+      "id": "kopolimer-szczepiony",
+      "term": "Kopolimer szczepiony",
+      "aliases": [],
+      "category": "połączenia merów",
+      "status": "defined",
+      "definition": "W łańcuchu głównym jest jeden rodzaj meru, a drugi tworzy rozgałęzienie od łańcucha głównego (łańcuch boczny).",
+      "source_slides": [
+        15
+      ],
+      "figures": [],
+      "examples": [],
+      "related": [],
+      "flashcards": [
+        {
+          "q": "Czym jest kopolimer szczepiony?",
+          "a": "Łańcuch główny z jednego meru, drugi mer tworzy łańcuchy boczne."
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "s04_f1",
+      "file": "images/s04_f1.png",
+      "slide": 4,
+      "caption": "Mer polistyrenu zaznaczony klamrą oraz model „makaronu” – polimer jako zbiór łańcuchów",
+      "concepts": [
+        "polimer",
+        "mer",
+        "polistyren"
+      ]
+    },
+    {
+      "id": "s04_f2",
+      "file": "images/s04_f2.png",
+      "slide": 4,
+      "caption": "Fragment łańcucha teflonu (PTFE) z zaznaczonymi merami",
+      "concepts": [
+        "mer",
+        "ptfe"
+      ]
+    },
+    {
+      "id": "s10_f1",
+      "file": "images/s10_f1.png",
+      "slide": 10,
+      "caption": "Łańcuch z zaznaczonym merem i stopniem polimeryzacji; Hermann Staudinger",
+      "concepts": [
+        "mer",
+        "stopien-polimeryzacji",
+        "hermann-staudinger"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "slide": 8,
+      "task": "Uzupełnić wzory monomerów: eten, propen, etenol, kwas akrylowy, styren; sformułować wniosek, jakie cząsteczki mogą być monomerami."
+    }
+  ]
+}
